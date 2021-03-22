@@ -43,15 +43,17 @@ INSTALLED_APPS = [
     'posts',
 ]
 
-REST_FRAMEWORK = {        
-        'DEFAULT_PERMISSION_CLASSES': [
-            'rest_framework.permissions.IsAuthenticatedOrReadOnly', 
-        ],
-    
-        'DEFAULT_AUTHENTICATION_CLASSES': [
-            'rest_framework.authentication.TokenAuthentication',
-        ]
-    }
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES':
+    [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
+
+    'DEFAULT_AUTHENTICATION_CLASSES':
+    [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -65,7 +67,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
-CORS_URLS_REGEX = r'^/api/.*$' 
+CORS_URLS_REGEX = r'^/api/.*$'
 ROOT_URLCONF = 'yatube_api.urls'
 TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 TEMPLATES = [
