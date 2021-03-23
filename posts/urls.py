@@ -5,11 +5,10 @@ from rest_framework.routers import DefaultRouter
 from .views import CommentViewSet, PostViewSet
 
 router = DefaultRouter()
-# В роутере можно зарегистрировать любое количество пар "URL, viewset":
-router.register('api/v1/posts', PostViewSet)
-router.register(r'api/v1/posts/(?P<post_id>\d+)/comments', CommentViewSet)
+router.register('posts', PostViewSet)
+router.register(r'posts/(?P<post_id>\d+)/comments', CommentViewSet)
 
 urlpatterns = [
-    path('api/v1/api-token-auth/', views.obtain_auth_token),
+    path('api-token-auth/', views.obtain_auth_token),
     path('', include(router.urls)),
 ]
