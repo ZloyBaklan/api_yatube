@@ -1,4 +1,5 @@
-# api_yatube
+# CRUD for Yatube (api_yatube)
+Based on the Yautube project(hw02-hw06)
 The project contains applications and models (no frontend).
 All required packages are in requirements.txt
 Before starting the project, in addition to installing the virtual environment, you must run:
